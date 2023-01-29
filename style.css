@@ -5,6 +5,8 @@ html {
     font-size: 62.5%;
 }
 body {
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template: .2fr 1.2fr / .3fr 1.7fr;
     grid-template-areas: 
@@ -23,17 +25,87 @@ img {
 /* img #main-user {
     background-color: rgb(60, 60, 85);
 } */
-
+ul {
+    list-style: none;
+}
 .dashboard {
     grid-area: dashboard;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(73, 77, 95);
+    color: rgb(229, 234, 245);
+}
+h1 {
+    font-size: 2.5rem;
+    margin-left: 10%;
+}
+.basic-nav, .settings-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.7rem;
+
 }
 .search-bar {
     height: 100%;
     display: grid;
     grid-template: 1fr 1.7fr / 1fr .5fr;
+    padding: 0 5%;
 }
-.header {
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+    
+}
+.welcome-msg {
+    padding-top:10px;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.content-msg {
+    display: flex;
+    flex-direction: column;
+}
+.username-handle {
+    font-size: 2rem;
+}
+input {
+    width: 70%;
+    height: 50%;
+    border: 2px solid rgb(73, 77, 95);
+    border-radius: 2rem;
+}
+.content-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    text-align: center;
+    height: 35px;
+    max-height: 40px;
+    min-width: 100px;
+    border: 2px solid rgb(73, 77, 95);
+    border-radius: 2rem;
+    background: rgb(229, 234, 245);
+    color: black;
+
+}
+header {
     grid-area: header;
+    background-color: rgb(160, 210, 235);
+    color: black
 }
 main {
     display: grid;
