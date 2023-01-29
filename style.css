@@ -8,21 +8,55 @@ body {
     display: grid;
     grid-template: .2fr 1.2fr / .3fr 1.7fr;
     grid-template-areas: 
-    "dashboard header"
-    "dashboard main";
+        "dashboard header"
+        "dashboard main";
     height: 100vh;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); */
 }
 .dashboard {
     grid-area: dashboard;
-    /* grid-area: 1 / 1 / span 2 / span 1; */
+}
+.search-bar {
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 1.7fr / 1fr .5fr;
 }
 .header {
     grid-area: header;
-    /* grid-area: 1 / 2 / 2 / span 1; */
 }
-.main {
+main {
+    display: grid;
     grid-area: main;
-    /* grid-area: 2 / 2 / 3 / 3; */
+    grid-template: 1fr / 1.5fr 0.5fr;
+    grid-template-areas:
+        "project-container announcements-trending-container";
+}
+.project-container {
+    grid-area: project-container;
+    display: grid;
+    grid-template: .2fr 1fr 1fr 1fr/ 1fr 1fr;
+    grid-template-areas: 
+        "project-header project-header"
+        "project-item project-item"
+        "project-item project-item"
+}
+.announcements-trending-container {
+    grid-area: announcements-trending-container;
+    display: grid;
+    grid-template: 1.2fr 0.8fr / 1fr;
+    grid-template-areas: 
+        "announcements"
+        "trending"
+}
+.project-header {
+    grid-area: project-header;
+}
+.announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template: .2fr 1fr 1fr 1fr / 1fr;
+}
+.trending {
+    grid-area: trending;
+    display: grid;
+    grid-template: .2fr 1fr 1fr 1fr 1fr / 1fr;
 }
