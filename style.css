@@ -13,6 +13,7 @@ body {
         "dashboard header"
         "dashboard main";
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 img {
     border: 1px solid black;
@@ -22,9 +23,7 @@ img {
     height: 32px;
     width: auto;
 }
-/* img #main-user {
-    background-color: rgb(60, 60, 85);
-} */
+
 ul {
     list-style: none;
 }
@@ -77,7 +76,7 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-.username-handle {
+.username-handle, .username {
     font-size: 2rem;
 }
 input {
@@ -97,7 +96,7 @@ button {
     max-height: 40px;
     min-width: 100px;
     border: 2px solid rgb(73, 77, 95);
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     background: rgb(229, 234, 245);
     color: black;
 
@@ -105,7 +104,8 @@ button {
 header {
     grid-area: header;
     background-color: rgb(160, 210, 235);
-    color: black
+    color: black;
+    box-shadow: 0 4px 3px -2px gray
 }
 main {
     display: grid;
@@ -113,6 +113,7 @@ main {
     grid-template: 1fr / 1.5fr 0.5fr;
     grid-template-areas:
         "project-container announcements-trending-container";
+    padding: 0 5%;
 }
 .project-container {
     grid-area: project-container;
@@ -121,7 +122,8 @@ main {
     grid-template-areas: 
         "project-header project-header"
         "project-item project-item"
-        "project-item project-item"
+        "project-item project-item";
+    grid-gap: 1.5rem;
 }
 .announcements-trending-container {
     grid-area: announcements-trending-container;
@@ -131,16 +133,73 @@ main {
         "announcements"
         "trending"
 }
+h2 {
+    font-size: 1.9rem;
+}
+h3 {
+    font-size: 1.7rem;
+}
+.project-item {
+    border: 3px solid black;
+    border-radius: 1.5rem;
+    width: 375px;
+    height: 200px;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1.2rem;
+    box-shadow: 2px 7px 3px -2px gray;
+    background-color: rgb(215, 215, 232);
+    color: black;
+}
+.item-actions {
+    align-self: flex-end;
+}
 .project-header {
     grid-area: project-header;
+}
+.announcements-trending-container  h2 {
+    padding-left: 10px;
 }
 .announcements {
     grid-area: announcements;
     display: grid;
     grid-template: .2fr 1fr 1fr 1fr / 1fr;
 }
+.announcement-item {
+    
+    padding: 10px;
+    border-bottom: 2px solid rgb(215, 215, 232);
+
+}
 .trending {
     grid-area: trending;
     display: grid;
     grid-template: .2fr 1fr 1fr 1fr 1fr / 1fr;
+}
+.trending-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+/* Interactivity */
+button:hover {
+    border: 2px solid #8458B3;
+}
+.project-item:hover, button:hover {
+    cursor: pointer;
+}
+.project-item:hover {
+    box-shadow: 2px 7px 3px -2px #8458B3;
+    height: 205px;
+    width: 380px;
+}
+li:hover{
+    color: #8458B3;
+    font-size: 2rem;
+}
+.announcement-item:hover{
+    background-color: rgb(215, 215, 232);
 }
