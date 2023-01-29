@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    display: grid;
+    grid-template: .2fr 1.2fr / .3fr 1.7fr;
+    grid-template-areas: 
+    "dashboard header"
+    "dashboard main";
+    height: 100vh;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+}
+.dashboard {
+    grid-area: dashboard;
+    /* grid-area: 1 / 1 / span 2 / span 1; */
+}
+.header {
+    grid-area: header;
+    /* grid-area: 1 / 2 / 2 / span 1; */
+}
+.main {
+    grid-area: main;
+    /* grid-area: 2 / 2 / 3 / 3; */
+}
