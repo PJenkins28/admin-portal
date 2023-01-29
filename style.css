@@ -12,6 +12,18 @@ body {
         "dashboard main";
     height: 100vh;
 }
+img {
+    border: 1px solid black;
+    padding: 2px;
+    background-color: rgb(165, 165, 232);
+    border-radius: 2rem;
+    height: 32px;
+    width: auto;
+}
+/* img #main-user {
+    background-color: rgb(60, 60, 85);
+} */
+
 .dashboard {
     grid-area: dashboard;
 }
